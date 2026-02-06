@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Kategori Produk - Toko One Set</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        a { text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .product-card { padding: 10px; }
+        button { 
+            background: #4E61D3; 
+            color: white; 
+            padding: 8px 15px; 
+            border-radius: 5px; 
+            border: none; 
+            cursor: pointer; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover { background: #3b4bad; }
+    </style>
+</head>
+
+<body bgcolor="#cbd9ff">
+
+<table width="100%" bgcolor="#4a6fa5" cellpadding="10" cellspacing="0" border="0">
+    <tr>
+        <td align="center">
+            <font color="white" size="6"><b>Toko One Set Korean Style</b></font><br><br>
+            <table width="80%" bgcolor="#cbd9ff" cellpadding="5" style="border-radius: 5px;">
+                <tr>
+                    <td>
+                        <marquee behavior="scroll" direction="left">
+                            <font color="black" size="4"><b> 🎀 Free Ongkir Ke Seluruh Indonesia ── ⋆⋅𖤓⋅⋆ ── Tanpa Minimal Belanja! 🎀 </b></font>
+                        </marquee>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<table width="100%" bgcolor="#3b5985" cellpadding="8" cellspacing="0" border="0">
+    <tr align="center">
+        <td>
+            <a href="index.html"><font color="white"><b>HOME</b></font></a> &nbsp;|&nbsp;
+            <a href="transaksi.html"><font color="white"><b>FORM TRANSAKSI</b></font></a> &nbsp;|&nbsp;
+            <a href="tentangkami.html"><font color="white"><b>TENTANG KAMI</b></font></a> &nbsp;|&nbsp;
+            <a href="kontak.html"><font color="white"><b>KONTAK</b></font></a>
+        </td>
+    </tr>
+</table>
+
+<table width="100%" cellpadding="15" cellspacing="0" border="0">
+    <tr valign="top">
+        <td width="20%" bgcolor="#dce6ff" style="border-right: 2px solid #fff;">
+            <h3 style="color:#4a6fa5; border-bottom:2px solid #4a6fa5; padding-bottom:5px; margin-top:0;">KATEGORI PRODUK</h3>
+            <ul style="list-style-type: square; padding-left: 20px; line-height: 1.8;">
+                <li><a href="#dress"><font color="black">Dress</font></a></li>
+                <li><a href="#oneset"><font color="black">One Set</font></a></li>
+                <li><a href="#atasan"><font color="black">Atasan</font></a></li>
+                <li><a href="#bawahan"><font color="black">Bawahan</font></a></li>
+            </ul>
+            <br>
+            <h3 style="color: #4a6fa5; border-bottom: 2px solid #4a6fa5; padding-bottom: 5px;">HUBUNGI KAMI</h3>
+            <p style="font-size: 14px; line-height: 1.5;">
+                <strong>Instagram:</strong><br> @koreansetshop_salma<br><br>
+                <strong>WhatsApp:</strong><br> 0896839717<br><br>
+                <strong>Email:</strong><br> salma@koreanstyle.co.id
+            </p>
+        </td>
+
+        <td width="60%" bgcolor="#cbd9ff">
+            <center><h2 style="color: #4a6fa5; border-bottom: 2px solid #4a6fa5; display:inline-block; padding-bottom:5px;">SEMUA KATEGORI</h2></center>
+            <br>
+
+            <table width="100%" border="0" cellpadding="10" cellspacing="15">
+                
+                <tr>
+                    <td colspan="3" bgcolor="#4a6fa5" style="border-radius: 5px;">
+                        <font color="white" size="4"><b id="dress">♥ Kategori Dress ♥︎</b></font>
+                    </td>
+                </tr>
+                <tr align="center" valign="bottom">
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s2.jpg" alt="dress" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Mini Dress Korean</b><br>
+                            <font color="#d9534f">Rp 230.000</font><br><br>
+                            <button onclick="beli('Mini Dress Korean', 230000, 'DRS-02')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s7.jpg" alt="dress" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Long Dress Style</b><br>
+                            <font color="#d9534f">Rp 200.000</font><br><br>
+                            <button onclick="beli('Long Dress Style', 200000, 'DRS-07')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" style="border: 2px dashed #4a6fa5; border-radius: 8px;">
+                        <br><br><font color="#666"><i>Produk segera hadir...</i></font><br><br>
+                    </td>
+                </tr>
+                
+                <tr><td colspan="3" height="20"></td></tr>
+
+                <tr>
+                    <td colspan="3" bgcolor="#4a6fa5" style="border-radius: 5px;">
+                        <font color="white" size="4"><b id="oneset">✮ Kategori One Set ✮</b></font>
+                    </td>
+                </tr>
+                <tr align="center" valign="bottom">
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s4.jpg" alt="one set" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Korean Elegan Set</b><br>
+                            <font color="#d9534f">Rp 270.000</font><br><br>
+                            <button onclick="beli('Korean Elegan Set', 270000, 'SET-04')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s9.jpg" alt="one set" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Setelan Blazer</b><br>
+                            <font color="#d9534f">Rp 300.000</font><br><br>
+                            <button onclick="beli('Setelan Blazer', 300000, 'SET-09')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s8.jpg" alt="atasan" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Atasan Korean Style</b><br>
+                            <font color="#d9534f">Rp 260.000</font><br><br>
+                            <button onclick="beli('Atasan Korean Style', 260000, 'TOP-08')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr><td colspan="3" height="20"></td></tr>
+
+                <tr>
+                    <td colspan="3" bgcolor="#4a6fa5" style="border-radius: 5px;">
+                        <font color="white" size="4"><b id="atasan">♥︎ Kategori Atasan ♥︎</b></font>
+                    </td>
+                </tr>
+                <tr align="center" valign="bottom">
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s1.jpg" alt="atasan" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Chic Coquette Outfit</b><br>
+                            <font color="#d9534f">Rp 150.000</font><br><br>
+                            <button onclick="beli('Chic Coquette', 150000, 'TOP-01')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s5.jpg" alt="atasan" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Atasan Kemeja</b><br>
+                            <font color="#d9534f">Rp 290.000</font><br><br>
+                            <button onclick="beli('Atasan Kemeja', 290000, 'TOP-05')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" style="border: 2px dashed #4a6fa5; border-radius: 8px;">
+                        <br><br><font color="#666"><i>Produk segera hadir...</i></font><br><br>
+                    </td>
+                </tr>
+
+                <tr><td colspan="3" height="20"></td></tr>
+
+                <tr>
+                    <td colspan="3" bgcolor="#4a6fa5" style="border-radius: 5px;">
+                        <font color="white" size="4"><b id="bawahan">✮ Kategori Bawahan ✮</b></font>
+                    </td>
+                </tr>
+                <tr align="center" valign="bottom">
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s3.jpg" alt="bawahan" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Celana Kulot</b><br>
+                            <font color="#d9534f">Rp 250.000</font><br><br>
+                            <button onclick="beli('Celana Kulot', 250000, 'BTM-03')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" bgcolor="white" style="border-radius: 8px;">
+                        <img src="s6.jpg" alt="bawahan" width="180" height="180" style="object-fit:cover;"><br><br>
+                        <div class="product-card">
+                            <b>Rok Mini</b><br>
+                            <font color="#d9534f">Rp 250.000</font><br><br>
+                            <button onclick="beli('Rok Mini', 250000, 'BTM-06')">Beli Sekarang</button>
+                        </div>
+                    </td>
+                    <td width="33%" style="border: 2px dashed #4a6fa5; border-radius: 8px;">
+                        <br><br><font color="#666"><i>Produk segera hadir...</i></font><br><br>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+
+        <td width="20%" bgcolor="#dce6ff" style="border-left: 2px solid #fff;">
+            <h3 style="color:#4a6fa5; border-bottom:2px solid #4a6fa5; padding-bottom:5px; margin-top:0;">INFO PENTING</h3>
+            <p style="line-height: 1.6;">
+                ✔ Pengiriman seluruh Indonesia<br>
+                ✔ COD tersedia<br>
+                ✔ 100% Barang Ori<br>
+                ✔ Respon cepat 24 jam
+            </p>
+            <br>
+            <h3 style="color: #4a6fa5; border-bottom: 2px solid #4a6fa5; padding-bottom: 5px;">KETERANGAN</h3>
+              <p style="background-color: #fff; padding: 10px; border: 1px solid #4a6fa5;">
+              <font size="2">
+                Sebelum membeli pastikan <b>Kode Barang</b> yang di Input sudah sesuai!
+              </font>
+              </p>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" bgcolor="#4a6fa5" cellpadding="15" cellspacing="0">
+    <tr>
+        <td align="center">
+            <font color="white" size="2">
+                Kontak: salma@koreanstyle.co.id | WhatsApp: 0896839717<br><br>
+                © 2025 Korean Style Shop - All Rights Reserved
+            </font>
+        </td>
+    </tr>
+</table>
+
+<script>
+function beli(nama, harga, kode) {
+    // 1. Simpan data ke memori browser (LocalStorage)
+    localStorage.setItem('namaBarang', nama);
+    localStorage.setItem('hargaBarang', harga);
+    localStorage.setItem('kodeBarang', kode);
+    
+    // 2. Arahkan ke halaman transaksi
+    window.location.href = "transaksi.html";
+}
+</script>
+
+</body>
+</html>

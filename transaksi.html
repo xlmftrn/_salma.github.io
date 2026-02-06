@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Form Transaksi - Toko One Set</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #cbd9ff; }
+        a { text-decoration: none; transition: 0.3s; }
+        a:hover { text-decoration: underline; opacity: 0.8; }
+        
+        /* Style untuk Kotak Form Utama */
+        .form-container {
+            width: 600px; /* Lebar kotak pas di tengah */
+            max-width: 90%;
+            margin: 30px auto; /* Posisi Tengah */
+            background-color: white;
+            border-radius: 15px; /* Sudut melengkung */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Efek Bayangan agar timbul */
+            overflow: hidden; /* Agar sudut melengkung tidak tertutup header */
+        }
+
+        .form-header {
+            background: linear-gradient(135deg, #4a6fa5, #2c4a75); /* Warna Gradasi */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .form-body {
+            padding: 30px;
+        }
+
+        /* Style Input agar rapi */
+        .input-group { margin-bottom: 15px; }
+        .label { font-weight: bold; color: #444; display: block; margin-bottom: 5px; }
+        
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box; /* Agar padding tidak melebarkan kotak */
+            font-size: 14px;
+            transition: border 0.3s;
+            background-color: #f9f9f9;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #4a6fa5;
+            background-color: #fff;
+            outline: none;
+        }
+
+        /* Pilihan Radio Button */
+        .radio-group label {
+            margin-right: 15px;
+            cursor: pointer;
+            color: #555;
+        }
+
+        /* Tombol */
+        .btn-area { text-align: center; margin-top: 25px; }
+        
+        .btn-cetak {
+            background: #4a6fa5; color: white; 
+            padding: 12px 30px; border-radius: 30px; 
+            font-weight: bold; border: none; cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .btn-cetak:hover { background: #3b5985; transform: translateY(-2px); }
+
+        .btn-batal {
+            background: #e74c3c; color: white; 
+            padding: 12px 30px; border-radius: 30px; 
+            font-weight: bold; border: none; cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            margin-left: 10px;
+        }
+        .btn-batal:hover { background: #c0392b; transform: translateY(-2px); }
+
+    </style>
+</head>
+
+<body>
+
+<table width="100%" bgcolor="#4a6fa5" cellpadding="10" cellspacing="0" border="0">
+    <tr>
+        <td align="center">
+            <font color="white" size="6"><b>Toko One Set Korean Style</b></font><br><br>
+            <table width="80%" bgcolor="#cbd9ff" cellpadding="5" style="border-radius: 5px;">
+                <tr>
+                    <td>
+                        <marquee behavior="scroll" direction="left">
+                            <font color="black" size="4"><b> 🎀 Free Ongkir Ke Seluruh Indonesia ── ⋆⋅𖤓⋅⋆ ── Tanpa Minimal Belanja! 🎀 </b></font>
+                        </marquee>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<table width="100%" bgcolor="#3b5985" cellpadding="8" cellspacing="0" border="0">
+    <tr align="center">
+        <td>
+            <a href="index.html"><font color="white"><b>HOME</b></font></a> | 
+            <a href="tentangkami.html"><font color="white"><b>TENTANG KAMI</b></font></a> |
+            <a href="kategori.html"><font color="white"><b>KATEGORI PRODUK</b></font></a>
+        </td>
+    </tr>
+</table>
+
+<div class="form-container">
+    <div class="form-header">
+        FORM PEMESANAN BARANG
+    </div>
+    
+    <div class="form-body">
+        <form id="orderForm">
+            <div style="border-bottom: 2px dashed #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                <h4 style="color:#4a6fa5; margin-top:0;">DATA DIRI</h4>
+                
+                <div class="input-group">
+                    <span class="label">Nama Lengkap</span>
+                    <input type="text" id="nama" required placeholder="Masukkan nama Anda...">
+                </div>
+                
+                <div class="input-group">
+                    <span class="label">Email</span>
+                    <input type="email" id="email" required placeholder="contoh@email.com">
+                </div>
+                
+                <div class="input-group">
+                    <span class="label">No. Telepon (WhatsApp)</span>
+                    <input type="tel" id="telp" required placeholder="08xxxx">
+                </div>
+                
+                <div class="input-group">
+                    <span class="label">Alamat Lengkap</span>
+                    <textarea id="alamat" rows="3" required placeholder="Jalan, RT/RW, Kelurahan, Kecamatan..."></textarea>
+                </div>
+            </div>
+
+            <div style="border-bottom: 2px dashed #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                <h4 style="color:#4a6fa5; margin-top:0;">DETAIL PESANAN</h4>
+                
+                <div class="input-group">
+                    <span class="label">Kode Barang</span>
+                    <input type="text" id="kode" readonly style="background: #e9ecef; color: #555; font-weight:bold;">
+                </div>
+				
+				<div class="input-group">
+                    <span class="label">Nomor Kode Baju</span>
+                    <input type="nomor" id="nomor" required placeholder="234">
+                </div> <p> "pastikan nomor baju yang diinput sesuai!" </p>
+                
+                <div style="display: flex; gap: 15px;">
+                    <div class="input-group" style="flex: 1;">
+                        <span class="label">Jumlah</span>
+                        <input type="number" id="jumlah" min="1" value="1">
+                    </div>
+                    <div class="input-group" style="flex: 1;">
+                        <span class="label">Ukuran</span>
+                        <select id="ukuran">
+                            <option value="S">Small (S)</option>
+                            <option value="M">Medium (M)</option>
+                            <option value="L">Large (L)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="color:#4a6fa5; margin-top:0;">PENGIRIMAN & PEMBAYARAN</h4>
+                
+                <div class="input-group radio-group">
+                    <span class="label">Jasa Kurir</span>
+                    <label><input type="radio" name="kurir" value="JNE" checked> JNE</label>
+                    <label><input type="radio" name="kurir" value="J&T"> J&T</label>
+                    <label><input type="radio" name="kurir" value="SiCepat"> SiCepat</label>
+                </div>
+                
+                <div class="input-group radio-group">
+                    <span class="label">Metode Pembayaran</span>
+                    <label><input type="radio" name="bayar" value="Transfer Bank" checked> Transfer Bank</label>
+                    <label><input type="radio" name="bayar" value="COD"> COD (Bayar di Tempat)</label>
+                </div>
+            </div>
+
+            <div class="btn-area">
+                <button type="button" class="btn-cetak" onclick="cetakStruk()">KIRIM PESANAN</button>
+                <button type="reset" class="btn-batal">BATAL</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div style="text-align: center; color: #555; padding-bottom: 30px; font-size: 14px;">
+    ✔ 100% Barang Original &nbsp;•&nbsp; ✔ Garansi Pengembalian &nbsp;•&nbsp; ✔ Respon Cepat
+</div>
+
+<table width="100%" border="0" bgcolor="#4a6fa5" cellpadding="15" cellspacing="0">
+    <tr valign="middle">
+        <td align="center">
+            <font color="white" size="2">
+                © 2025 Korean Style Shop - All Rights Reserved
+            </font>
+        </td>
+    </tr>
+</table>
+
+<script>
+window.onload = function() {
+    const namaProduk = localStorage.getItem('namaBarang');
+    const hargaProduk = localStorage.getItem('hargaBarang');
+    const kodeProduk = localStorage.getItem('kodeBarang');
+
+    if (namaProduk) {
+        document.getElementById('kode').value = kodeProduk;
+        document.getElementById('kode').setAttribute('data-nama-full', namaProduk);
+        document.getElementById('kode').setAttribute('data-harga-satuan', hargaProduk);
+    } else {
+        document.getElementById('kode').value = "Belum Ada Produk Dipilih";
+    }
+};
+
+function cetakStruk() {
+    const namaPembeli = document.getElementById('nama').value;
+    const email = document.getElementById('email').value;
+    const telp = document.getElementById('telp').value;
+    const alamat = document.getElementById('alamat').value;
+	const nomor = document.getElementById('nomor').value;
+    const jumlah = parseInt(document.getElementById('jumlah').value);
+    const ukuran = document.getElementById('ukuran').value;
+    const kurir = document.querySelector('input[name="kurir"]:checked').value;
+    const bayar = document.querySelector('input[name="bayar"]:checked').value;
+
+    const namaProdukFull = document.getElementById('kode').getAttribute('data-nama-full') || "Produk Pilihan";
+    const hargaSatuan = parseInt(document.getElementById('kode').getAttribute('data-harga-satuan')) || 0;
+    
+    const ongkir = 0; // Free Ongkir sesuai promo
+    const totalHargaProduk = hargaSatuan * jumlah;
+    const totalBayar = totalHargaProduk + ongkir;
+
+    if(!namaPembeli || !alamat || !telp) {
+        alert("Mohon lengkapi Nama, Nomor Telepon, dan Alamat!");
+        return;
+    }
+
+    const noInv = "ORD-" + new Date().getFullYear() + Math.floor(Math.random() * 1000);
+    
+    const struk = window.open('', '_blank');
+    struk.document.write(`
+        <html>
+        <head>
+            <title>Invoice #${noInv}</title>
+            <style>
+                body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f4f4f4; }
+                .invoice-box { 
+                    max-width: 600px; margin: auto; padding: 30px; border: 1px solid #eee; 
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); background: white; border-radius: 10px;
+                }
+                .header { border-bottom: 2px solid #4a6fa5; padding-bottom: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+                .title { font-size: 28px; font-weight: bold; color: #4a6fa5; }
+                table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                th { background: #4a6fa5; color: white; padding: 12px; text-align: left; }
+                td { padding: 12px; border-bottom: 1px solid #ddd; }
+                .total { margin-top: 20px; text-align: right; font-size: 20px; font-weight: bold; color: #333; }
+                .btn-print { margin-top: 30px; text-align: center; }
+                button { padding: 10px 20px; background: #4a6fa5; color: white; border: none; cursor: pointer; border-radius: 5px; }
+                @media print { .btn-print { display: none; } body { background: white; } .invoice-box { box-shadow: none; border: none; } }
+            </style>
+        </head>
+        <body>
+            <div class="invoice-box">
+                <div class="header">
+                    <div>
+                        <div class="title">INVOICE</div>
+                        <small>One Set Korean Style</small>
+                    </div>
+                    <div style="text-align: right;">
+                        <strong>No: #${noInv}</strong><br>
+                        ${new Date().toLocaleDateString('id-ID')}
+                    </div>
+                </div>
+                
+                <p>
+                    <strong>Kepada Yth:</strong> ${namaPembeli}<br>
+                    <strong>Telepon:</strong> ${telp}<br>
+                    <strong>Alamat:</strong> ${alamat}<br>
+                    <strong>Metode:</strong> ${bayar} (${kurir})
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produk</th>
+							<th>No Baju</th>
+                            <th>Size</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${namaProdukFull}</td>
+							<td>${nomor}</td>
+                            <td>${ukuran}</td>
+                            <td>Rp ${hargaSatuan.toLocaleString()}</td>
+                            <td>${jumlah}</td>
+                            <td>Rp ${totalHargaProduk.toLocaleString()}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="total">
+                    TOTAL BAYAR: Rp ${totalBayar.toLocaleString()}
+                </div>
+                
+                <div class="btn-print">
+                    <button onclick="window.print()">Cetak / Simpan PDF</button>
+                    <button onclick="window.close()" style="background:#888;">Tutup</button>
+                </div>
+            </div>
+        </body>
+        </html>
+    `);
+} 
+</script>
+
+</body>
+</html>
